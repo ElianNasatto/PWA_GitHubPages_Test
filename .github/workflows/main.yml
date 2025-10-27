@@ -33,13 +33,13 @@ jobs:
         run: dotnet workload install wasm-tools
 
       - name: Restore Dependencies
-        run: dotnet restore BlazorApp1.csproj
+        run: dotnet restore BlazorApp1/BlazorApp1.csproj
       
       - name: Build
         run: dotnet build -c Release --no-restore
 
       - name: Publish .NET
-        run: dotnet publish BlazorApp1.csproj -c Release -o docs --nologo
+        run: dotnet publish BlazorApp1/BlazorApp1.csproj -c Release -o docs --nologo
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
