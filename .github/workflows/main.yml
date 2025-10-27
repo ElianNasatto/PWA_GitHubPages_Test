@@ -36,7 +36,7 @@ jobs:
         run: dotnet restore BlazorApp1/BlazorApp1.csproj
       
       - name: Build
-        run: dotnet build -c Release --no-restore
+        run: dotnet build BlazorApp1/BlazorApp1.csproj -c Release --no-restore
 
       - name: Publish .NET
         run: dotnet publish BlazorApp1/BlazorApp1.csproj -c Release -o docs --nologo
