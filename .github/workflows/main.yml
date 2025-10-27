@@ -24,12 +24,12 @@ on:
                 runs-on: ubuntu-latest
                 steps:
                     - name: Checkout
-                    - uses: actions/checkout@v4
+                    - uses: actions/checkout@v5
                     
                     - name: Setup .NET
-                        uses: actions/setup-dotnet@v3
-                    with:
-                        dotnet-version: 9.0.x
+                        uses: actions/setup-dotnet@v5
+                         with:
+                            dotnet-version: 9.0.x
                         
                     - name: Install .NET Wasm Tools
                         run: dotnet workload install wasm-tools
